@@ -1,0 +1,271 @@
+.event-list {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.event-list.empty {
+  text-align: center;
+  padding: 2rem;
+  background: #f3f4f6;
+  border-radius: 8px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.events-table thead {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #111827;
+}
+
+.events-table th {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.events-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.events-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.events-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.events-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.title {
+  font-weight: 600;
+  color: #111827;
+  max-width: 200px;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.datetime {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.datetime small {
+  display: block;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+.duration {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.duration-badge {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.duration-badge.all-day {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.description {
+  color: #6b7280;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description[title] {
+  cursor: help;
+}
+
+.attendees {
+  font-size: 0.9rem;
+  max-width: 150px;
+}
+
+.attendee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.attendee-list span {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.actions .btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 1024px) {
+  .description,
+  .attendees,
+  .title {
+    max-width: 100px;
+  }
+
+  .events-table th,
+  .events-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-list {
+    margin-top: 1rem;
+  }
+
+  .events-table {
+    font-size: 0.85rem;
+  }
+
+  .events-table th,
+  .events-table td {
+    padding: 0.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .actions .btn {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+.recurrence-badge {
+  display: inline-block;
+  background-color: #ecfdf5;
+  color: #065f46;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 4px;
+  background: #f3f4f6;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-edit {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.btn-edit:hover {
+  background: #bfdbfe;
+}
+
+.btn-duplicate {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.btn-duplicate:hover {
+  background: #fde68a;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.pagination-btn {
+  padding: 0.5rem 1rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-btn:disabled {
+  background: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.pagination-info {
+  font-weight: 600;
+  color: #374151;
+  min-width: 200px;
+  text-align: center;
+}

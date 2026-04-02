@@ -1,0 +1,81 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bulk Calendar//Sample Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sample Events
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+UID:sample-event-1@bulkcalendar
+DTSTAMP:20260402T100000Z
+DTSTART:20260410T140000Z
+DTEND:20260410T150000Z
+SUMMARY:Team Standup Meeting
+DESCRIPTION:Daily team synchronization meeting
+LOCATION:Conference Room A
+RRULE:FREQ=DAILY;BYDAY=MO,TU,WE,TH,FR;COUNT=20
+ATTENDEE:john.doe@example.com
+ATTENDEE:jane.smith@example.com
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-event-2@bulkcalendar
+DTSTAMP:20260402T100000Z
+DTSTART;VALUE=DATE:20260412
+DTEND;VALUE=DATE:20260413
+SUMMARY:Company All-Day Retreat
+DESCRIPTION:Annual company team building event
+LOCATION:Mountain Resort Center
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-event-3@bulkcalendar
+DTSTAMP:20260402T100000Z
+DTSTART:20260415T090000Z
+DTEND:20260415T110000Z
+SUMMARY:Project Kickoff
+DESCRIPTION:Launch meeting for Q2 project
+LOCATION:Virtual - Zoom Link in agenda
+ATTENDEE:team@example.com
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-event-4@bulkcalendar
+DTSTAMP:20260402T100000Z
+DTSTART:20260420T133000Z
+DTEND:20260420T150000Z
+SUMMARY:Client Presentation
+DESCRIPTION:Quarterly business review with stakeholders
+LOCATION:Downtown Office - Suite 500
+ATTENDEE:client@example.com
+ATTENDEE:manager@example.com
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-event-5@bulkcalendar
+DTSTAMP:20260402T100000Z
+DTSTART;VALUE=DATE:20260425
+DTEND;VALUE=DATE:20260426
+SUMMARY:Conference Attendance
+DESCRIPTION:Industry conference and networking
+LOCATION:Convention Center Downtown
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-event-6@bulkcalendar
+DTSTAMP:20260402T100000Z
+DTSTART:20260505T150000Z
+DTEND:20260505T160000Z
+SUMMARY:Budget Review Meeting
+DESCRIPTION:Review Q2 budget allocation and spending
+LOCATION:Finance Department
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20260630
+ATTENDEE:finance@example.com
+ATTENDEE:director@example.com
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-event-7@bulkcalendar
+DTSTAMP:20260402T100000Z
+DTSTART:20260501T100000Z
+DTEND:20260501T110000Z
+SUMMARY:Monthly All-Hands Meeting
+DESCRIPTION:Monthly company-wide update and announcements
+LOCATION:Auditorium
+RRULE:FREQ=MONTHLY;BYMONTHDAY=1;COUNT=12
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,243 @@
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  max-width: 100%;
+  margin: 0;
+}
+
+:root[data-theme="dark"] .event-form {
+  background: transparent;
+  border: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #111827;
+  font-size: 0.95rem;
+}
+
+:root[data-theme="dark"] .form-group label {
+  color: #f3f4f6;
+}
+
+.form-group.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #3b82f6;
+}
+
+.checkbox-label span {
+  flex: 1;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group select {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .event-form {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.btn-secondary {
+  background-color: #6b7280;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #4b5563;
+}
+
+.btn-success {
+  background-color: #10b981;
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background-color: #059669;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.btn-edit {
+  background-color: #3b82f6;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.btn-edit:hover {
+  background-color: #2563eb;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+.weekdays-selector {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+.weekday-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  background: white;
+}
+
+.weekday-checkbox input[type='checkbox'] {
+  margin: 0;
+}
+
+.weekday-checkbox input[type='checkbox']:checked {
+  accent-color: #3b82f6;
+}
+
+.weekday-checkbox:has(input[type='checkbox']:checked) {
+  background-color: #dbeafe;
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .weekdays-selector {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.35rem;
+    padding: 0.5rem;
+  }
+
+  .weekday-checkbox {
+    padding: 0.35rem;
+    font-size: 0.8rem;
+  }
+}
